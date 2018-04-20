@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="lprnPenggajianDataset" targetNamespace="http://tempuri.org/lprnPenggajianDataset.xsd" xmlns:mstns="http://tempuri.org/lprnPenggajianDataset.xsd" xmlns="http://tempuri.org/lprnPenggajianDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="penggajianConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="penggajianConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Sistem_Penggajian_Koperasi.My.MySettings.GlobalReference.Default.penggajianConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwLprnPenggajianTableAdapter" GeneratorDataComponentClassName="vwLprnPenggajianTableAdapter" Name="vwLprnPenggajian" UserDataComponentName="vwLprnPenggajianTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="penggajianConnectionString (MySettings)" DbObjectName="penggajian.dbo.vwLprnPenggajian" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_transaksi, namakk, jlh_Gaji, tgl_gajian, gaji_bersih, nama FROM dbo.vwLprnPenggajian</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_transaksi" DataSetColumn="id_transaksi" />
+              <Mapping SourceColumn="namakk" DataSetColumn="namakk" />
+              <Mapping SourceColumn="jlh_Gaji" DataSetColumn="jlh_Gaji" />
+              <Mapping SourceColumn="tgl_gajian" DataSetColumn="tgl_gajian" />
+              <Mapping SourceColumn="gaji_bersih" DataSetColumn="gaji_bersih" />
+              <Mapping SourceColumn="nama" DataSetColumn="nama" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="lprnPenggajianDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="lprnPenggajianDataset" msprop:Generator_UserDSName="lprnPenggajianDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwLprnPenggajian" msprop:Generator_TableClassName="vwLprnPenggajianDataTable" msprop:Generator_TableVarName="tablevwLprnPenggajian" msprop:Generator_TablePropName="vwLprnPenggajian" msprop:Generator_RowDeletingName="vwLprnPenggajianRowDeleting" msprop:Generator_RowChangingName="vwLprnPenggajianRowChanging" msprop:Generator_RowEvHandlerName="vwLprnPenggajianRowChangeEventHandler" msprop:Generator_RowDeletedName="vwLprnPenggajianRowDeleted" msprop:Generator_UserTableName="vwLprnPenggajian" msprop:Generator_RowChangedName="vwLprnPenggajianRowChanged" msprop:Generator_RowEvArgName="vwLprnPenggajianRowChangeEvent" msprop:Generator_RowClassName="vwLprnPenggajianRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_transaksi" msprop:Generator_ColumnVarNameInTable="columnid_transaksi" msprop:Generator_ColumnPropNameInRow="id_transaksi" msprop:Generator_ColumnPropNameInTable="id_transaksiColumn" msprop:Generator_UserColumnName="id_transaksi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="namakk" msprop:Generator_ColumnVarNameInTable="columnnamakk" msprop:Generator_ColumnPropNameInRow="namakk" msprop:Generator_ColumnPropNameInTable="namakkColumn" msprop:Generator_UserColumnName="namakk">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jlh_Gaji" msprop:Generator_ColumnVarNameInTable="columnjlh_Gaji" msprop:Generator_ColumnPropNameInRow="jlh_Gaji" msprop:Generator_ColumnPropNameInTable="jlh_GajiColumn" msprop:Generator_UserColumnName="jlh_Gaji">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tgl_gajian" msprop:Generator_ColumnVarNameInTable="columntgl_gajian" msprop:Generator_ColumnPropNameInRow="tgl_gajian" msprop:Generator_ColumnPropNameInTable="tgl_gajianColumn" msprop:Generator_UserColumnName="tgl_gajian" type="xs:dateTime" />
+              <xs:element name="gaji_bersih" msprop:Generator_ColumnVarNameInTable="columngaji_bersih" msprop:Generator_ColumnPropNameInRow="gaji_bersih" msprop:Generator_ColumnPropNameInTable="gaji_bersihColumn" msprop:Generator_UserColumnName="gaji_bersih">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwLprnPenggajian" />
+      <xs:field xpath="mstns:id_transaksi" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
