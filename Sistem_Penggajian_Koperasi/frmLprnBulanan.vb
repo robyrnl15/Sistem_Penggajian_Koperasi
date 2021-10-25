@@ -2,6 +2,23 @@
 Imports System.Xml
 
 Public Class frmLprnBulanan
+    Sub atur()
+        With DataGridView1.ColumnHeadersDefaultCellStyle
+            DataGridView1.Columns(0).Width = 100
+            DataGridView1.Columns(0).HeaderText = "Kode Gaji"
+            DataGridView1.Columns(1).Width = 130
+            DataGridView1.Columns(1).HeaderText = "Tanggal Gajian"
+            DataGridView1.Columns(2).Width = 150
+            DataGridView1.Columns(2).HeaderText = "Jumlah Gaji"
+
+            .Alignment = DataGridViewContentAlignment.MiddleCenter
+            .BackColor = Color.DarkRed
+            .ForeColor = Color.Gold
+            .Font = New Font(.Font.FontFamily, .Font.Size,
+             .Font.Style Or FontStyle.Bold, GraphicsUnit.Point)
+            .Font = New Font("cambria", 11)
+        End With
+    End Sub
     Sub cariData()
         Try
             ambilkoneksi()
@@ -23,14 +40,30 @@ Public Class frmLprnBulanan
         End Try
 
     End Sub
+    Sub TampilData()
+        Try
+            cmd = New SqlCommand("select * from Gaji", conn)
+
+            adapter = New SqlDataAdapter
+            adapter.SelectCommand = cmd
+            ds = New DataSet
+            adapter.Fill(ds, "Gaji")
+
+            DataGridView1.DataSource = ds
+            DataGridView1.DataMember = "Gaji"
+            atur()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
     Private Sub btnTutup_Click(sender As Object, e As EventArgs) Handles btnTutup.Click
         Me.Close()
     End Sub
 
     Private Sub frmLprnBulanan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PenggajianDataSet1.Gaji' table. You can move, or remove it, as needed.
-        Me.GajiTableAdapter.Fill(Me.PenggajianDataSet1.Gaji)
+        ambilkoneksi()
 
+        TampilData()
     End Sub
 
     Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click
@@ -87,6 +120,10 @@ Public Class frmLprnBulanan
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 End Class

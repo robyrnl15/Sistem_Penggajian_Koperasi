@@ -30,8 +30,6 @@ Public Class frmLogin
             End If
             txtUsername.Text = ""
             txtPassword.Text = ""
-
-
         End If
     End Sub
 

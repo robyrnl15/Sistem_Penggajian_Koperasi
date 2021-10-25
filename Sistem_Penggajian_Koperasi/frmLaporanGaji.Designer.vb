@@ -23,12 +23,19 @@ Partial Class frmLaporanGaji
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLaporanGaji))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNoTransaksi = New System.Windows.Forms.TextBox()
         Me.btnCari = New System.Windows.Forms.Button()
         Me.btnTutup = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Kode_Transaksi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nama_Anggota = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Gaji_Kotor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tanggal_Penggajian = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Gaji_Bersih = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nama_Karyawan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VwLprnPenggajianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LprnPenggajianDataset = New Sistem_Penggajian_Koperasi.lprnPenggajianDataset()
         Me.GajiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -37,12 +44,6 @@ Partial Class frmLaporanGaji
         Me.GajiTableAdapter = New Sistem_Penggajian_Koperasi.penggajianDataSet1TableAdapters.GajiTableAdapter()
         Me.VwLprnPenggajianTableAdapter = New Sistem_Penggajian_Koperasi.lprnPenggajianDatasetTableAdapters.vwLprnPenggajianTableAdapter()
         Me.btnConvert = New System.Windows.Forms.Button()
-        Me.Kode_Transaksi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nama_Anggota = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Gaji_Kotor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tanggal_Penggajian = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Gaji_Bersih = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nama_Karyawan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwLprnPenggajianBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LprnPenggajianDataset, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,6 +113,48 @@ Partial Class frmLaporanGaji
         Me.DataGridView1.Size = New System.Drawing.Size(643, 150)
         Me.DataGridView1.TabIndex = 6
         '
+        'Kode_Transaksi
+        '
+        Me.Kode_Transaksi.DataPropertyName = "id_transaksi"
+        Me.Kode_Transaksi.HeaderText = "Kode Transaksi"
+        Me.Kode_Transaksi.Name = "Kode_Transaksi"
+        Me.Kode_Transaksi.ReadOnly = True
+        '
+        'Nama_Anggota
+        '
+        Me.Nama_Anggota.DataPropertyName = "namakk"
+        Me.Nama_Anggota.HeaderText = "Nama Anggota"
+        Me.Nama_Anggota.Name = "Nama_Anggota"
+        Me.Nama_Anggota.ReadOnly = True
+        '
+        'Gaji_Kotor
+        '
+        Me.Gaji_Kotor.DataPropertyName = "jlh_Gaji"
+        Me.Gaji_Kotor.HeaderText = "Gaji Kotor"
+        Me.Gaji_Kotor.Name = "Gaji_Kotor"
+        Me.Gaji_Kotor.ReadOnly = True
+        '
+        'Tanggal_Penggajian
+        '
+        Me.Tanggal_Penggajian.DataPropertyName = "tgl_gajian"
+        Me.Tanggal_Penggajian.HeaderText = "Tanggal Penggajian"
+        Me.Tanggal_Penggajian.Name = "Tanggal_Penggajian"
+        Me.Tanggal_Penggajian.ReadOnly = True
+        '
+        'Gaji_Bersih
+        '
+        Me.Gaji_Bersih.DataPropertyName = "gaji_bersih"
+        Me.Gaji_Bersih.HeaderText = "Gaji Bersih"
+        Me.Gaji_Bersih.Name = "Gaji_Bersih"
+        Me.Gaji_Bersih.ReadOnly = True
+        '
+        'Nama_Karyawan
+        '
+        Me.Nama_Karyawan.DataPropertyName = "nama"
+        Me.Nama_Karyawan.HeaderText = "Nama Karyawan"
+        Me.Nama_Karyawan.Name = "Nama_Karyawan"
+        Me.Nama_Karyawan.ReadOnly = True
+        '
         'VwLprnPenggajianBindingSource
         '
         Me.VwLprnPenggajianBindingSource.DataMember = "vwLprnPenggajian"
@@ -155,54 +198,11 @@ Partial Class frmLaporanGaji
         Me.btnConvert.Text = "Convert To Excel"
         Me.btnConvert.UseVisualStyleBackColor = True
         '
-        'Kode_Transaksi
-        '
-        Me.Kode_Transaksi.DataPropertyName = "id_transaksi"
-        Me.Kode_Transaksi.HeaderText = "Kode Transaksi"
-        Me.Kode_Transaksi.Name = "Kode_Transaksi"
-        Me.Kode_Transaksi.ReadOnly = True
-        '
-        'Nama_Anggota
-        '
-        Me.Nama_Anggota.DataPropertyName = "namakk"
-        Me.Nama_Anggota.HeaderText = "Nama Anggota"
-        Me.Nama_Anggota.Name = "Nama_Anggota"
-        Me.Nama_Anggota.ReadOnly = True
-        '
-        'Gaji_Kotor
-        '
-        Me.Gaji_Kotor.DataPropertyName = "jlh_Gaji"
-        Me.Gaji_Kotor.HeaderText = "Gaji Kotor"
-        Me.Gaji_Kotor.Name = "Gaji_Kotor"
-        Me.Gaji_Kotor.ReadOnly = True
-        '
-        'Tanggal_Penggajian
-        '
-        Me.Tanggal_Penggajian.DataPropertyName = "tgl_gajian"
-        Me.Tanggal_Penggajian.HeaderText = "Tanggal Penggajian"
-        Me.Tanggal_Penggajian.Name = "Tanggal_Penggajian"
-        Me.Tanggal_Penggajian.ReadOnly = True
-        '
-        'Gaji_Bersih
-        '
-        Me.Gaji_Bersih.DataPropertyName = "gaji_bersih"
-        Me.Gaji_Bersih.HeaderText = "Gaji Bersih"
-        Me.Gaji_Bersih.Name = "Gaji_Bersih"
-        Me.Gaji_Bersih.ReadOnly = True
-        '
-        'Nama_Karyawan
-        '
-        Me.Nama_Karyawan.DataPropertyName = "nama"
-        Me.Nama_Karyawan.HeaderText = "Nama Karyawan"
-        Me.Nama_Karyawan.Name = "Nama_Karyawan"
-        Me.Nama_Karyawan.ReadOnly = True
-        '
         'frmLaporanGaji
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(738, 359)
-        Me.ControlBox = False
         Me.Controls.Add(Me.btnConvert)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnTutup)
@@ -210,6 +210,7 @@ Partial Class frmLaporanGaji
         Me.Controls.Add(Me.txtNoTransaksi)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmLaporanGaji"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Laporan Transaksi Penggajian"

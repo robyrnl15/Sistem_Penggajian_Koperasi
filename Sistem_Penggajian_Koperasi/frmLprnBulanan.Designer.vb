@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmLprnBulanan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,25 @@ Partial Class frmLprnBulanan
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLprnBulanan))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnCari = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GajiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PenggajianDataSet1 = New Sistem_Penggajian_Koperasi.penggajianDataSet1()
         Me.btnTutup = New System.Windows.Forms.Button()
         Me.txtBulan = New System.Windows.Forms.TextBox()
         Me.GajiTableAdapter = New Sistem_Penggajian_Koperasi.penggajianDataSet1TableAdapters.GajiTableAdapter()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnConvert = New System.Windows.Forms.Button()
-        Me.KodeGaji = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TanggalGajian = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.JumlahGaji = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PenggajianDataSet1 = New Sistem_Penggajian_Koperasi.penggajianDataSet1()
+        Me.GajiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GajiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PenggajianDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GajiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -76,25 +74,12 @@ Partial Class frmLprnBulanan
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KodeGaji, Me.TanggalGajian, Me.JumlahGaji})
-        Me.DataGridView1.DataSource = Me.GajiBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(56, 114)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(423, 162)
         Me.DataGridView1.TabIndex = 4
-        '
-        'GajiBindingSource
-        '
-        Me.GajiBindingSource.DataMember = "Gaji"
-        Me.GajiBindingSource.DataSource = Me.PenggajianDataSet1
-        '
-        'PenggajianDataSet1
-        '
-        Me.PenggajianDataSet1.DataSetName = "penggajianDataSet1"
-        Me.PenggajianDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'btnTutup
         '
@@ -137,38 +122,23 @@ Partial Class frmLprnBulanan
         Me.btnConvert.Text = "Export ke Excel"
         Me.btnConvert.UseVisualStyleBackColor = True
         '
-        'KodeGaji
-        '
-        Me.KodeGaji.DataPropertyName = "Id_gaji"
-        Me.KodeGaji.HeaderText = "Kode Gaji"
-        Me.KodeGaji.Name = "KodeGaji"
-        Me.KodeGaji.ReadOnly = True
-        '
-        'TanggalGajian
-        '
-        Me.TanggalGajian.DataPropertyName = "tglGajian"
-        Me.TanggalGajian.HeaderText = "Tanggal Gajian"
-        Me.TanggalGajian.Name = "TanggalGajian"
-        Me.TanggalGajian.ReadOnly = True
-        Me.TanggalGajian.Width = 140
-        '
-        'JumlahGaji
-        '
-        Me.JumlahGaji.DataPropertyName = "jlh_Gaji"
-        Me.JumlahGaji.HeaderText = "Jumlah Gaji"
-        Me.JumlahGaji.Name = "JumlahGaji"
-        Me.JumlahGaji.ReadOnly = True
-        Me.JumlahGaji.Width = 140
-        '
         'Timer1
         '
+        '
+        'PenggajianDataSet1
+        '
+        Me.PenggajianDataSet1.DataSetName = "penggajianDataSet1"
+        Me.PenggajianDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'GajiBindingSource
+        '
+        Me.GajiBindingSource.DataMember = "Gaji"
         '
         'frmLprnBulanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(517, 337)
-        Me.ControlBox = False
         Me.Controls.Add(Me.btnConvert)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtBulan)
@@ -177,12 +147,13 @@ Partial Class frmLprnBulanan
         Me.Controls.Add(Me.btnCari)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmLprnBulanan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FORM LAPORAN GAJI PERBULANAN"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GajiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PenggajianDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GajiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -194,13 +165,10 @@ Partial Class frmLprnBulanan
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnTutup As Button
     Friend WithEvents txtBulan As TextBox
-    Friend WithEvents PenggajianDataSet1 As penggajianDataSet1
     Friend WithEvents GajiBindingSource As BindingSource
     Friend WithEvents GajiTableAdapter As penggajianDataSet1TableAdapters.GajiTableAdapter
     Friend WithEvents Label3 As Label
     Friend WithEvents btnConvert As Button
-    Friend WithEvents KodeGaji As DataGridViewTextBoxColumn
-    Friend WithEvents TanggalGajian As DataGridViewTextBoxColumn
-    Friend WithEvents JumlahGaji As DataGridViewTextBoxColumn
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents PenggajianDataSet1 As penggajianDataSet1
 End Class

@@ -11,10 +11,11 @@
     <AssemblyName>Sistem_Penggajian_Koperasi</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <PublishUrl>D:\New folder\Aplikasi Sistem Penggajian\Rev2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -69,7 +70,7 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logoSistem.ico</ApplicationIcon>
+    <ApplicationIcon>Untitled-1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>60C663721140EB8624E01EB936C5D095AA2342AF</ManifestCertificateThumbprint>
@@ -117,10 +118,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="CrystalReport2.vb">
+    <Compile Include="CrystalReport3.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsReport.Designer.vb">
@@ -200,6 +201,12 @@
     <Compile Include="frmUtamaKaryawan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="laporannya.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>laporannya.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="lprnPenggajianDataset.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,6 +239,12 @@
     <Compile Include="Bukti Pembayaran.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="testcrytal.Designer.vb">
       <DependentUpon>testcrytal.vb</DependentUpon>
     </Compile>
@@ -246,9 +259,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CrystalReport2.rpt">
+    <EmbeddedResource Include="CrystalReport3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHapusAnggota.resx">
       <DependentUpon>frmHapusAnggota.vb</DependentUpon>
@@ -286,6 +299,10 @@
     <EmbeddedResource Include="frmUtamaKaryawan.resx">
       <DependentUpon>frmUtamaKaryawan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="laporannya.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>laporannya.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -294,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bukti Pembayaran.resx">
       <DependentUpon>Bukti Pembayaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testcrytal.resx">
       <DependentUpon>testcrytal.vb</DependentUpon>
@@ -335,7 +355,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Sistem_Penggajian_Koperasi_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -408,6 +430,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logoSistem.ico" />
+    <Content Include="Untitled-1.ico" />
+    <None Include="Resources\logoSistem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

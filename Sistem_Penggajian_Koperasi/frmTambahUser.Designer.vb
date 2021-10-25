@@ -22,6 +22,7 @@ Partial Class frmTambahUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTambahUser))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,8 +35,8 @@ Partial Class frmTambahUser
         Me.cmbStatus = New System.Windows.Forms.ComboBox()
         Me.txtNoHp = New System.Windows.Forms.TextBox()
         Me.txtKodeBlok = New System.Windows.Forms.TextBox()
-        Me.txtNama = New System.Windows.Forms.TextBox()
         Me.txtId = New System.Windows.Forms.TextBox()
+        Me.txtNama = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -164,13 +165,6 @@ Partial Class frmTambahUser
         Me.txtKodeBlok.Size = New System.Drawing.Size(176, 20)
         Me.txtKodeBlok.TabIndex = 8
         '
-        'txtNama
-        '
-        Me.txtNama.Location = New System.Drawing.Point(137, 65)
-        Me.txtNama.Name = "txtNama"
-        Me.txtNama.Size = New System.Drawing.Size(305, 20)
-        Me.txtNama.TabIndex = 7
-        '
         'txtId
         '
         Me.txtId.Cursor = System.Windows.Forms.Cursors.No
@@ -179,6 +173,13 @@ Partial Class frmTambahUser
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(176, 20)
         Me.txtId.TabIndex = 6
+        '
+        'txtNama
+        '
+        Me.txtNama.Location = New System.Drawing.Point(137, 65)
+        Me.txtNama.Name = "txtNama"
+        Me.txtNama.Size = New System.Drawing.Size(305, 20)
+        Me.txtNama.TabIndex = 7
         '
         'GroupBox2
         '
@@ -249,12 +250,12 @@ Partial Class frmTambahUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(656, 514)
-        Me.ControlBox = False
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmTambahUser"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Tambah User"

@@ -58,5 +58,7 @@ Public Class frmTambahUser
             End If
     End Sub
 
+    Private Sub cmbStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbStatus.SelectedIndexChanged
 
+    End Sub
 End Class

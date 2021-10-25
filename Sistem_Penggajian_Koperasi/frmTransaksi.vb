@@ -294,6 +294,10 @@ Public Class frmTransaksi
         End If
     End Sub
 
+    Private Sub txtNamaAnggota_TextChanged(sender As Object, e As EventArgs) Handles txtNamaAnggota.TextChanged
+
+    End Sub
+
     'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
     '    Call totalPotongan()
     'End Sub

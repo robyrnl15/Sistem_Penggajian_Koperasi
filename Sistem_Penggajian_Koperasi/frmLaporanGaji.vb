@@ -2,7 +2,46 @@
 Imports System.Xml
 
 Public Class frmLaporanGaji
-    Private Sub BindingSource1_CurrentChanged(sender As Object, e As EventArgs)
+    Sub atur()
+        With DataGridView1.ColumnHeadersDefaultCellStyle
+            DataGridView1.Columns(0).Width = 100
+            DataGridView1.Columns(0).HeaderText = "Kode Transaksi"
+            DataGridView1.Columns(1).Width = 100
+            DataGridView1.Columns(1).HeaderText = "Nama Anggota"
+            DataGridView1.Columns(2).Width = 100
+            DataGridView1.Columns(2).HeaderText = "Gaji Kotor"
+            DataGridView1.Columns(3).Width = 100
+            DataGridView1.Columns(3).HeaderText = "Tanggal Penggajian"
+            DataGridView1.Columns(4).Width = 100
+            DataGridView1.Columns(4).HeaderText = "Gaji Bersih"
+            DataGridView1.Columns(5).Width = 100
+            DataGridView1.Columns(5).HeaderText = "Nama Karyawan"
+
+            .Alignment = DataGridViewContentAlignment.MiddleCenter
+            .BackColor = Color.DarkRed
+            .ForeColor = Color.Gold
+            .Font = New Font(.Font.FontFamily, .Font.Size,
+             .Font.Style Or FontStyle.Bold, GraphicsUnit.Point)
+            .Font = New Font("cambria", 11)
+        End With
+    End Sub
+
+    Sub TampilData()
+        Try
+            ambilkoneksi()
+            cmd = New SqlCommand("select * from vwLprnPenggajian", conn)
+
+            adapter = New SqlDataAdapter
+            adapter.SelectCommand = cmd
+            ds = New DataSet
+            adapter.Fill(ds, "vwLprnPenggajian")
+
+            DataGridView1.DataSource = ds
+            DataGridView1.DataMember = "vwLprnPenggajian"
+            atur()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 
@@ -26,12 +65,11 @@ Public Class frmLaporanGaji
         DataGridView1.DataSource = ds
         DataGridView1.DataMember = "vwLprnPenggajian"
         txtNoTransaksi.Text = ""
+
     End Sub
 
     Private Sub frmLaporanGaji_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'LprnPenggajianDataset.vwLprnPenggajian' table. You can move, or remove it, as needed.
-        Me.VwLprnPenggajianTableAdapter.Fill(Me.LprnPenggajianDataset.vwLprnPenggajian)
-
+        TampilData()
         ambilkoneksi()
 
     End Sub

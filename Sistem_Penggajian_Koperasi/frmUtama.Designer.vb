@@ -22,6 +22,7 @@ Partial Class frmUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUtama))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PenggajianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PembayaranToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -137,13 +138,13 @@ Partial Class frmUtama
         'TambahUserToolStripMenuItem
         '
         Me.TambahUserToolStripMenuItem.Name = "TambahUserToolStripMenuItem"
-        Me.TambahUserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TambahUserToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.TambahUserToolStripMenuItem.Text = "Tambah User"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'Button7
@@ -231,6 +232,7 @@ Partial Class frmUtama
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -241,6 +243,7 @@ Partial Class frmUtama
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
